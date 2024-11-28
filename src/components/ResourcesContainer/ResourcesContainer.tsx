@@ -6,6 +6,7 @@ export default function ResourcesContainer() {
     <section className={styles.container}>
       <div className={styles.group}>
         <ResourceDisplay name="Madeira" icon="🌳" amount={0} />
+        <ResourceDisplay name="Moeda" icon="🪙" amount={0} />
       </div>
     </section>
   );
