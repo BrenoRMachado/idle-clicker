@@ -2,20 +2,13 @@ import { Resources } from "../../types";
 import ResourceDisplay from "../ResourceDisplay/ResourceDisplay";
 import styles from "./ResourcesContainer.module.css";
 
-export default function ResourcesContainer() {
+interface ResourcesContainerProps {
+  resources: Resources;
+}
 
-  const resources: Resources = {
-    wood: {
-      name: "Madeira",
-      icon: "🌳",
-      amount: 0,
-    },
-    coin: {
-      name: "Moeda",
-      icon: "🪙",
-      amount: 0,
-    },
-  };
+export default function ResourcesContainer({resources,
+}: ResourcesContainerProps) {
+
 
   return (
     <section className={styles.container}>
