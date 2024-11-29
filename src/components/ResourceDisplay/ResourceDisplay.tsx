@@ -1,21 +1,17 @@
+import { Resource } from "../../types";
 import styles from "./ResourceDisplay.module.css";
 
 interface ResourceDisplayProps {
-    name: string;
-    icon: string;
-    amount: number;
+    resource: Resource;
   }
 
-export default function ResourceDisplay({
-    name,
-    icon,
-    amount,
-  }: ResourceDisplayProps) {
+export default function ResourceDisplay({ resource }: ResourceDisplayProps) {
+  
   return (
     <div className={styles.box}>
-      <h1 className={styles.name}>{name}</h1>
-      <span className={styles.icon}>{icon}</span>
-      <p className={styles.amount}>{amount}</p>
+      <h1 className={styles.name}>{resource.name}</h1>
+      <span className={styles.icon}>{resource.icon}</span>
+      <p className={styles.amount}>{resource.amount}</p>
     </div>
   );
 }
